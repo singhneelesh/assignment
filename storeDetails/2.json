@@ -1,0 +1,32 @@
+{
+    "store2": {
+      "id": 2,
+      "name": "Sample Grocery Store 2",
+      "location": "456 Elm Avenue",
+      "contact": {
+        "phone": "+1 555-987-6543",
+        "email": "contact@store2.com"
+      },
+      "groceryItems": [
+        {
+          "name": "Apple",
+          "price": 1.99,
+          "discountPercentage": 10,
+          "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+        },
+        {
+          "name": "Banana",
+          "price": 0.99,
+          "discountPercentage": 5,
+          "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+        },
+        {
+          "name": "Orange",
+          "price": 2.49,
+          "discountPercentage": 15,
+          "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+        }
+      ]
+    }
+  }
+  

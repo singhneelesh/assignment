@@ -1,0 +1,38 @@
+{
+    "store3": {
+      "id": 3,
+      "name": "Sample Grocery Store 5",
+      "location": "683 Sutter St, San Francisco, CA 94102",
+      "contact": {
+        "phone": "+1 566-789-1234",
+        "email": "contact@store5.com"
+      },
+      "groceryItems": [
+        {
+          "name": "Apple",
+          "price": 1.99,
+          "discountPercentage": 10,
+          "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+        },
+        {
+          "name": "Pineapple",
+          "price": 3.49,
+          "discountPercentage": 5,
+          "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+        },
+          {
+            "name": "Mango",
+            "price": 1.89,
+            "discountPercentage": 10,
+            "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+          },
+          {
+            "name": "Pineapple",
+            "price": 3.49,
+            "discountPercentage": 5,
+            "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+          }
+      ]
+    }
+  }
+  

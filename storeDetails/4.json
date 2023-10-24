@@ -1,0 +1,20 @@
+{
+    "store3": {
+      "id": 3,
+      "name": "Sample Grocery Store 4",
+      "location": "San Francisco, CA",
+      "contact": {
+        "phone": "+1 555-555-5555",
+        "email": "contact@store4.com"
+      },
+      "groceryItems": [
+        {
+          "name": "Apple",
+          "price": 1.99,
+          "discountPercentage": 10,
+          "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+        }
+      ]
+    }
+  }
+  

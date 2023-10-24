@@ -1,0 +1,56 @@
+{
+    "store1": {
+      "id": 1,
+      "name": "Sample Grocery Store 1",
+      "location": "123 Main Street",
+      "contact": {
+        "phone": "+1 555-123-4567",
+        "email": "contact@store1.com"
+      },
+      "groceryItems": [
+        {
+          "name": "Apple",
+          "price": 1.99,
+          "discountPercentage": 10,
+          "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+        },
+        {
+          "name": "Banana",
+          "price": 0.99,
+          "discountPercentage": 5,
+          "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+        },
+        {
+          "name": "Orange",
+          "price": 2.49,
+          "discountPercentage": 15,
+          "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+        },
+        {
+          "name": "Grapes",
+          "price": 3.99,
+          "discountPercentage": 0,
+          "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+        },
+        {
+          "name": "Strawberry",
+          "price": 2.79,
+          "discountPercentage": 20,
+          "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+        },
+        {
+          "name": "Mango",
+          "price": 1.89,
+          "discountPercentage": 10,
+          "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+        },
+        {
+          "name": "Pineapple",
+          "price": 3.49,
+          "discountPercentage": 5,
+          "image": "https://img.freepik.com/free-vector/apple-colorful-vector-design_341269-1123.jpg?w=740&t=st=1698152392~exp=1698152992~hmac=f38776dbc8aa52162edea2d4841bae585fcd2acc321c96de04b201af0c539b06"
+        }
+      ]
+    }
+  }
+  
