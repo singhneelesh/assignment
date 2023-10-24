@@ -1,0 +1,50 @@
+{
+    "stores": [
+      {
+        "id": 1,
+        "name": "Sample Grocery Store 1",
+        "location": "123 Main Street",
+        "contact": {
+          "phone": "+1 555-123-4567",
+          "email": "contact@store1.com"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Sample Grocery Store 2",
+        "location": "456 Elm Avenue",
+        "contact": {
+          "phone": "+1 555-987-6543",
+          "email": "contact@store2.com"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Sample Grocery Store 3",
+        "location": "789 Oak Lane",
+        "contact": {
+          "phone": "+1 555-777-8888",
+          "email": "contact@store3.com"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Sample Grocery Store 4",
+        "location": "321 Pine Road",
+        "contact": {
+          "phone": "+1 555-444-3333",
+          "email": "contact@store4.com"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Sample Grocery Store 5",
+        "location": "654 Cedar Street",
+        "contact": {
+          "phone": "+1 555-222-1111",
+          "email": "contact@store5.com"
+        }
+      }
+    ]
+  }
+  
