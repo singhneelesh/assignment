@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Upload Preview</title>
+  <style>
+    #image-preview {
+      margin-top: 20px;
+      max-width: 100%;
+      height: auto;
+      display: none; /* Hide the image preview until an image is selected */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Upload an Image</h2>
+  
+  <!-- File input for uploading image -->
+  <input type="file" id="imageUpload" accept="image/*">
+  
+  <!-- Image element for displaying the preview -->
+  <img id="image-preview" alt="Image Preview">
+
+  <script>
+    // Reference to the file input and the image preview element
+    const imageUpload = document.getElementById('imageUpload');
+    const imagePreview = document.getElementById('image-preview');
+
+    // Listen for changes on the file input
+    imageUpload.addEventListener('change', function(event) {
+      const file = event.target.files[0]; // Get the selected file
+      
+      // Check if the file is an image
+      if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+
+        // Once the file is read, set it as the source of the image preview
+        reader.onload = function(e) {
+          imagePreview.src = e.target.result; // Display the image data
+          imagePreview.style.display = 'block'; // Show the image preview
+        };
+
+        reader.readAsDataURL(file); // Read the image file as a data URL
+      } else {
+        // If the file is not an image, hide the preview
+        imagePreview.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
