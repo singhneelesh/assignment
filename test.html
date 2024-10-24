@@ -3,49 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Upload Preview</title>
+  <title>File Upload Test</title>
   <style>
-    #image-preview {
+    #preview {
       margin-top: 20px;
       max-width: 100%;
       height: auto;
-      display: none; /* Hide the image preview until an image is selected */
+    }
+    .file-info {
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
-  <h2>Upload an Image</h2>
-  
-  <!-- File input for uploading image -->
-  <input type="file" id="imageUpload" accept="image/*">
-  
-  <!-- Image element for displaying the preview -->
-  <img id="image-preview" alt="Image Preview">
+  <h2>File Upload Test</h2>
+
+  <!-- File input for uploading an image -->
+  <label for="imageUpload">Upload an Image:</label>
+  <input type="file" id="imageUpload" accept="image/*"><br>
+
+  <!-- File input for uploading a video -->
+  <label for="videoUpload">Upload a Video:</label>
+  <input type="file" id="videoUpload" accept="video/*"><br>
+
+  <!-- File input for uploading a PDF -->
+  <label for="pdfUpload">Upload a PDF:</label>
+  <input type="file" id="pdfUpload" accept="application/pdf"><br>
+
+  <!-- File input for uploading any other file -->
+  <label for="fileUpload">Upload Any File:</label>
+  <input type="file" id="fileUpload"><br>
+
+  <!-- Preview section -->
+  <div id="preview-container">
+    <img id="preview" alt="Preview" style="display:none;">
+    <div id="file-info" class="file-info"></div>
+  </div>
 
   <script>
-    // Reference to the file input and the image preview element
+    // Get the HTML elements
     const imageUpload = document.getElementById('imageUpload');
-    const imagePreview = document.getElementById('image-preview');
+    const videoUpload = document.getElementById('videoUpload');
+    const pdfUpload = document.getElementById('pdfUpload');
+    const fileUpload = document.getElementById('fileUpload');
+    const preview = document.getElementById('preview');
+    const fileInfo = document.getElementById('file-info');
 
-    // Listen for changes on the file input
-    imageUpload.addEventListener('change', function(event) {
-      const file = event.target.files[0]; // Get the selected file
-      
-      // Check if the file is an image
+    // Function to preview image
+    const previewImage = (file) => {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        preview.src = e.target.result;
+        preview.style.display = 'block';
+        fileInfo.textContent = '';
+      };
+      reader.readAsDataURL(file);
+    };
+
+    // Function to show file info
+    const showFileInfo = (file) => {
+      preview.style.display = 'none';
+      fileInfo.textContent = `File uploaded: ${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
+    };
+
+    // Event listener for image upload
+    imageUpload.addEventListener('change', function() {
+      const file = this.files[0];
       if (file && file.type.startsWith('image/')) {
-        const reader = new FileReader();
-
-        // Once the file is read, set it as the source of the image preview
-        reader.onload = function(e) {
-          imagePreview.src = e.target.result; // Display the image data
-          imagePreview.style.display = 'block'; // Show the image preview
-        };
-
-        reader.readAsDataURL(file); // Read the image file as a data URL
+        previewImage(file);
       } else {
-        // If the file is not an image, hide the preview
-        imagePreview.style.display = 'none';
+        fileInfo.textContent = 'No image selected.';
+        preview.style.display = 'none';
+      }
+    });
+
+    // Event listener for video upload
+    videoUpload.addEventListener('change', function() {
+      const file = this.files[0];
+      if (file && file.type.startsWith('video/')) {
+        showFileInfo(file); // For video, just show file info
+      } else {
+        fileInfo.textContent = 'No video selected.';
+      }
+    });
+
+    // Event listener for PDF upload
+    pdfUpload.addEventListener('change', function() {
+      const file = this.files[0];
+      if (file && file.type === 'application/pdf') {
+        showFileInfo(file); // For PDF, show file info
+      } else {
+        fileInfo.textContent = 'No PDF selected.';
+      }
+    });
+
+    // Event listener for any file upload
+    fileUpload.addEventListener('change', function() {
+      const file = this.files[0];
+      if (file) {
+        showFileInfo(file); // For other files, just show file info
+      } else {
+        fileInfo.textContent = 'No file selected.';
       }
     });
   </script>
